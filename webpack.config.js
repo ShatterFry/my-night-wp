@@ -14,7 +14,20 @@ module.exports = {
         filename: '[name].js'
     },
     plugins: [
-        new HtmlWebpackPlugin({title: 'Webpack app'}),
+        new HtmlWebpackPlugin({
+            template: PATHS.source + '/index.pug',
+        }),
         new CleanWebpackPlugin('build')
-    ]
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                options: {
+                    pretty: true
+                }
+            }
+        ]
+    }
 };
