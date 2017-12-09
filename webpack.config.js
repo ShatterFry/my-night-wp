@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -8,16 +11,33 @@ const PATHS = {
 };
 
 module.exports = {
-    entry: PATHS.source + '/index.js',
+    entry: {
+        'index': PATHS.source + '/pages/index/index.js',
+        'blog': PATHS.source + '/pages/blog/blog.js'
+    },
     output: {
         path: PATHS.build,
-        filename: '[name].js'
+        filename: './js/[name].js'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: PATHS.source + '/index.pug',
+            filename: 'index.html',
+            chunks: ['index', 'common'],
+            template: PATHS.source + '/pages/index/index.pug',
         }),
-        new CleanWebpackPlugin('build')
+        new HtmlWebpackPlugin({
+            filename: 'blog.html',
+            chunks: ['blog', 'common'],
+            template: PATHS.source + '/pages/blog/blog.pug',
+        }),
+        new CleanWebpackPlugin('build'),
+        new ExtractTextPlugin('./css/[name].css'),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
+        }),
+        new OptimizeCssAssetsPlugin({
+            cssProcessorOptions: {discardComments: {removeAll: true}}
+        })
     ],
     module: {
         rules: [
@@ -27,6 +47,20 @@ module.exports = {
                 options: {
                     pretty: true
                 }
+            },
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    publicPath: '../',
+                    use: ['css-loader', 'sass-loader']
+                })
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
+                })
             }
         ]
     }
