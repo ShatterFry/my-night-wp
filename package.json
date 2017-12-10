@@ -5,7 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack",
+    "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,12 @@
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
+    "eslint": "^4.13.0",
+    "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
     "html-webpack-plugin": "^2.30.1",
+    "jquery": "^3.2.1",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
@@ -25,6 +30,8 @@
     "style-loader": "^0.19.0",
     "stylelint": "^8.3.1",
     "stylelint-webpack-plugin": "^0.9.0",
-    "webpack": "^3.10.0"
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   }
 }

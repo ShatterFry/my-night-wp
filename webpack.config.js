@@ -4,6 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -37,7 +39,15 @@ module.exports = {
         }),
         new OptimizeCssAssetsPlugin({
             cssProcessorOptions: {discardComments: {removeAll: true}}
-        })
+        }),
+        new StyleLintPlugin({
+            configFile: './.stylelintrc'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
+        new UglifyJSPlugin()
     ],
     module: {
         rules: [
@@ -61,6 +71,21 @@ module.exports = {
                     fallback: 'style-loader',
                     use: 'css-loader'
                 })
+            },
+            {
+                test: /\.js$/,
+                enforce: "pre",
+                loader: "eslint-loader",
+                options: {
+                    fix: true
+                }
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                }
             }
         ]
     }
