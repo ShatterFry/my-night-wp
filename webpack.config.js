@@ -7,6 +7,8 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+const autoprefixer = require('autoprefixer');
+
 const PATHS = {
     source: path.join(__dirname, 'source'),
     build: path.join(__dirname, 'build')
@@ -69,7 +71,23 @@ module.exports = {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader'
+                    use: [
+                        {
+                           loader: 'css-loader',
+                           options: {
+                               importLoaders: 1
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: (loader) => [
+                                    autoprefixer()
+                                ]
+                            }
+                        }
+                    ]
                 })
             },
             {
