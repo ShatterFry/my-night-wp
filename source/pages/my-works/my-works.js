@@ -6,7 +6,7 @@ import slider from '../../components/slider/slider.js';
 
 slider();
 
-let menu = createMenu(['Главная', 'Обо мне', 'Блог', 'Мои работы'], 'menu');
+let menu = createMenu(['Мои работы','Блог','Обо мне','Авторизация'], 'menu');
 
 document.body.appendChild(menu);
 

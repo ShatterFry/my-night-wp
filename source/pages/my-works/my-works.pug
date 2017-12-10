@@ -2,5 +2,16 @@ extends ../base
 block head
     title my-works page
 block content
-    h1 my-works page
+    h1 мои работы
     include ../../components/slider/slider.pug
+    h2 что обо мне говорят
+    h3 связаться со мной
+    form
+        label(for="name") Ваше имя
+        input(name="name" id="name")
+        label(for="email") Ваш email
+        input(name="email" id="email")
+        label(for="message") Ваше сообщение
+        input(name="message" id="message")
+        button Отправить
+        button Очистить

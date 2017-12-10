@@ -2,7 +2,7 @@ import 'normalize.css';
 import './login.scss';
 import createMenu from '../../components/menu/menu';
 
-let menu = createMenu(['Главная', 'Обо мне', 'Блог', 'Мои работы'], 'menu');
+let menu = createMenu(['Мои работы', 'Обо мне', 'Блог'], 'menu');
 
 document.body.appendChild(menu);
 
