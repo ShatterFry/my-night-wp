@@ -1,1 +1,1 @@
-webpackJsonp([1],{6:function(n,e,o){"use strict";o(0),o(7);var u=(0,function(n){return n&&n.__esModule?n:{default:n}}(o(1)).default)(["Главная","Обо мне","Блог"],"menu");document.body.appendChild(u),console.log("in blog.js")},7:function(n,e){}},[6]);
+webpackJsonp([3],{6:function(n,e,o){"use strict";o(0),o(7);var u=(0,function(n){return n&&n.__esModule?n:{default:n}}(o(1)).default)(["Главная","Обо мне","Блог"],"menu");document.body.appendChild(u),console.log("in blog.js")},7:function(n,e){}},[6]);

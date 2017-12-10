@@ -17,7 +17,10 @@ const PATHS = {
 module.exports = {
     entry: {
         'index': PATHS.source + '/pages/index/index.js',
-        'blog': PATHS.source + '/pages/blog/blog.js'
+        'blog': PATHS.source + '/pages/blog/blog.js',
+        'about': PATHS.source + '/pages/about/about.js',
+        'login': PATHS.source + '/pages/login/login.js',
+        'my-works': PATHS.source + '/pages/my-works/my-works.js'
     },
     output: {
         path: PATHS.build,
@@ -33,6 +36,21 @@ module.exports = {
             filename: 'blog.html',
             chunks: ['blog', 'common'],
             template: PATHS.source + '/pages/blog/blog.pug',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            chunks: ['about', 'common'],
+            template: PATHS.source + '/pages/about/about.pug',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'login.html',
+            chunks: ['login', 'common'],
+            template: PATHS.source + '/pages/login/login.pug',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'my-works.html',
+            chunks: ['my-works', 'common'],
+            template: PATHS.source + '/pages/my-works/my-works.pug',
         }),
         new CleanWebpackPlugin('build'),
         new ExtractTextPlugin('./css/[name].css'),

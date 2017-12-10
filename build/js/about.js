@@ -1,0 +1,1 @@
+webpackJsonp([4],{8:function(n,e,o){"use strict";o(0),o(9);var u=(0,function(n){return n&&n.__esModule?n:{default:n}}(o(1)).default)(["Главная","Обо мне","Блог","Мои работы"],"menu");document.body.appendChild(u),console.log("in about.js")},9:function(n,e){}},[8]);
