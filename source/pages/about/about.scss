@@ -1,3 +1,27 @@
+.hero{
+    position: relative;
+}
+
+.hero__socials{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.socials{
+    list-style: none;
+}
+
+.hero__user{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+}
+
+.section-title__pic{
+    width: 100%;
+}
+
 h1{
     color: green;
 }

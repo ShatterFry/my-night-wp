@@ -2,6 +2,24 @@ extends ../base
 block head
     title index page
 block content
+    section.section.hero
+        a(href="#").auth.hero__auth
+        .hero__title
+            .section-title
+                img(src=require('./bg.jpg'), alt="").section-title__pic
+            .hero__user
+                .user
+                    .user__pic
+                        img.user__pic-img
+                    .user__description
+                        .user__name Никита Каверин
+                        .user__date Личный сайт веб-разработчика
+                    .user__socials
+                        ul.socials
+                            each item in ['vk', 'gt', 'in']
+                                li.socials__item
+                                    a(href=`${item}`).socials__link
+                    .user__menu
     a(href="#") Авторизоваться
     h1 Никита Каверин
     span.desc Личный сайт веб разработчика

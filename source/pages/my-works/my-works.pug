@@ -2,16 +2,41 @@ extends ../base
 block head
     title my-works page
 block content
-    h1 мои работы
-    include ../../components/slider/slider.pug
-    h2 что обо мне говорят
-    h3 связаться со мной
-    form
-        label(for="name") Ваше имя
-        input(name="name" id="name")
-        label(for="email") Ваш email
-        input(name="email" id="email")
-        label(for="message") Ваше сообщение
-        input(name="message" id="message")
-        button Отправить
-        button Очистить
+    .wrapper
+
+        include ../../components/slider/slider.pug
+
+        section.section.speak
+            img.speak__img(src=require('./about_bg.jpg') alt="")
+            .container
+                h2.speak__title что обо мне говорят
+                
+                .opinions
+                    ul.opinions__list
+                        li.opinions__item.opinion
+                            img.opinion__photo(src="" alt="photo")
+                            img.opinion__style-pic(src="" alt="quotes")
+                            p.opinion__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
+                            .opinion__signature.signature
+                                span.signature__name Ковальчук Дмитрий
+                                span.signature__position - основатель Loftschool
+                            
+                        li.opinions__item.opinion
+                            img.opinion__photo(src="" alt="photo")
+                            img.opinion__style-pic(src="" alt="quotes")
+                            p.opinion__text Этот код выдержит любые испытания. Только, пожалуйста, не загружайте сайт на слишком старых браузерах!
+                            .opinion__signature.signature
+                                span.signature__name Сабанцев Владимир
+                                span.signature__position - преподаватель
+
+
+                .connect
+                    h3.connect__title связаться со мной
+                    form.form.connect__form
+                        input(name="name" id="name" class="form__name" placeholder="Ваше имя")
+                        input(name="email" id="email" class="form__email" placeholder="Ваш email")
+                        textarea(name="message" id="message" class="form__message" placeholder="Ваше сообщение")
+                        button.form__submit Отправить
+                        button.form__clear(type="button") Очистить
+
+    include ../../components/footer/footer.pug

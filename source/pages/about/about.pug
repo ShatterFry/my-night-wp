@@ -1,14 +1,81 @@
 extends ../base
-block head
-    title about page
+
 block content
-    header.header
-        div.header__name Никита Каверин
-        div.header__desc Личный сайт веб-разработчика
-    div.content
-        h1 обо мне
-        section.who
-            img(src="", alt="").who__photo
-            h2.who__title кто я
-            p.who__desc Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-            p.who__desc Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+  .wrapper
+
+    section.section.hero
+      .hero__socials
+        ul.socials
+          each item in ['vk', 'fb', 'in']
+            li.socials__item
+              a(href="" class=`socials__item socials__item_${item}`)
+                
+      .hero__title
+        .section-title
+          img(src=require("./header_bg.jpg"), alt="header background").section-title__pic
+        .user.hero__user
+          .user__pic
+            img.user__pic-img
+          .user__description
+            .user__name Владимир Астахов
+            .user__info Личный сайт разработчика
+      .hamburger.hero__menu
+      .arrow-down.hero__scroll-btn
+      
+    section.section.about
+      .about__left
+        .triangle.tringle_fill_white.about__left-triangle
+        .about__left-title
+          .block-title Обо мне
+        .about__left-content
+          .user-description
+            .user-description__image
+              img.user-description__avatar(src="" alt="")
+            .user-description__title
+              .block-subtitle Кто я
+            .user-description__text.text-content
+              p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about__right
+        .triangle.tringle_fill_beige.about__right-triangle
+        .about__right-title
+          .block-subtitle Чем я могу быть вам полезен
+        .about__right-text.text-content
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .about__right-content
+          ul.skills-list
+            each item in ['Frontend', 'Backend', 'Workflow']
+              li.skills-list__item
+                .skills-row
+                  .skills-row__title #{item}
+                  ul.skills-row__list
+                    each skill in ['Html5', 'css3', 'JavaScript']
+                      li.skills-row__item
+                        .skill
+                          svg.skill__circle
+                          .skill__title #{skill}
+    section.section.map
+      .google-map
+      .map__contacts
+        .contacts
+          .contacts__title
+            .block-subtitle Контакты
+          ul.contacts__list
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon
+                  .contacts-row__content shatterfry
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon
+                  .contacts-row__content +7 919 983 04 71
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon
+                  .contacts-row__content nikwhite333@gmail.com
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon
+                  .contacts-row__content Волгоград, ул. 64-й армии д.38б
+      
+  include ../../components/footer/footer.pug
