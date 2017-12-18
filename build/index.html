@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="viewport" content="initial-scale=1.0, width=device-width">
+    <title>index page</title>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper"><img class="page-bg" src="images/bg.jpg">
+      <section class="section auth">
+        <h1 class="auth__title">авторизуйтесь</h1>
+        <form class="auth__form form-container">
+          <input name="login" id="login" placeholder="Логин">
+          <input name="password" id="password" placeholder="Пароль">
+          <div class="form-container__human">
+            <input type="checkbox" name="human" id="human">
+            <label for="human">Я человек</label>
+          </div>
+          <div class="auth__subtitle">Вы точно не робот?</div>
+          <div class="form-container__robot">
+            <input type="radio" name="robot-no" id="robot-no">
+            <label for="robot-no">Да</label>
+            <input type="radio" name="robot-yes" id="robot-yes">
+            <label for="robot-yes">Не уверен</label>
+          </div>
+        </form>
+        <div class="form-container__btns">
+          <div class="btns"><a class="auth__btn" href="#">На главную</a>
+            <button class="auth__btn" type="submit">Войти</button>
+          </div>
+        </div>
+      </section><a class="auth hero__auth" href="#"></a>
+      <div class="hero__title">
+        <div class="section-title"></div>
+        <div class="hero__user">
+          <div class="user">
+            <div class="user__pic"><img class="user__pic-img"></div>
+            <div class="user__description">
+              <div class="user__name">Никита Каверин</div>
+              <div class="user__date">Личный сайт веб-разработчика</div>
+            </div>
+            <div class="user__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="socials__link" href="vk"></a></li>
+                <li class="socials__item"><a class="socials__link" href="gt"></a></li>
+                <li class="socials__item"><a class="socials__link" href="in"></a></li>
+              </ul>
+            </div>
+            <div class="user__menu"></div>
+          </div>
+        </div>
+      </div>
+    </div><a href="#">Авторизоваться</a>
+    <h1>Никита Каверин</h1><span class="desc">Личный сайт веб разработчика</span><img src="images/webpack.svg" width="100">
+<footer class="footer">
+  <div class="footer__row">
+    <div class="container">
+      <div class="footer__col footer__col-left">
+        <div class="footer__description">Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool</div>
+      </div>
+      <div class="footer__col footer__col-center">
+        <nav class="menu"></nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer__row">
+    <div class="container">
+      <div class="footer__copyright">
+        <div class="copyright"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>
