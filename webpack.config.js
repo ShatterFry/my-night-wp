@@ -133,6 +133,13 @@ module.exports = {
                     presets: ['@babel/preset-env']
                   }
                 }
+              },
+              {
+                  test: /\.(ttf|otf)$/,
+                  loader: 'file-loader',
+                  options: {
+                      name: 'css/fonts/[name].[ext]'
+                  }
               }
         ]
     }

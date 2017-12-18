@@ -9,7 +9,6 @@ import '../../components/footer/footer.scss';
 slider();
 
 //let menu = createMenu(['Мои работы','Блог','Обо мне','Авторизация'], 'menu');
-
 //document.body.appendChild(menu);
 
 console.log('in my-works.js');

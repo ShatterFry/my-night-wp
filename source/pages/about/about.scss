@@ -4,8 +4,8 @@
 
 .hero__socials{
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 5%;
+    left: 5%;
 }
 
 .socials{
@@ -15,13 +15,117 @@
 .hero__user{
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+}
+
+.user__avatar{
+    margin-bottom: 36px;
+}
+
+.user__avatar-pic{
+    position: relative;
+    width: 142px;
+    height: 142px;
+    border-radius: 50% 50%;
+    overflow: hidden;
+    border: 2px solid blue;
+}
+
+.user__avatar-img{
+    position: absolute;
+    display: block;
+    //max-width: 100%;
+    height: 100%;
+    top: 0%;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    //transform: translate(-50%, -50%);
+}
+
+.user__name{
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+.user__info{
+    font-size: 16px;
+}
+
+.hero__menu{
+    position: absolute;
+    top: 5%;
+    right: 5%;
 }
 
 .section-title__pic{
     width: 100%;
 }
 
-h1{
-    color: green;
+.hero__scroll-btn{
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    transform: translate(-50%, -72%);
+}
+
+.about{
+    display: flex;
+}
+
+.about__left, .about__right{
+    width: 50%;
+}
+
+.about__left{
+    background: #f2f0e8;
+}
+
+.about__left-container{
+    display: flex;
+}
+
+.block-title{
+    color: #474b57;
+}
+
+.about__left-content{
+    width: 443px;
+}
+
+.block-subtitle{
+    font-size: 35px;
+    color: #474b57;
+}
+
+.user-description__avatar-pic{
+    height: 392px;
+}
+
+.user-description__avatar-img{
+    height: 100%;
+}
+
+.text-content p{
+    font-size: 16px;
+    color: #474b57;
+}
+
+.about__right{
+    background: #eae8e2;
+}
+
+ul.skills-list, ul.skills-row__list{
+    list-style: none;
+}
+
+.skills-row__title{
+    font-size: 28px;
+    color: #474b57;
+}
+
+.skill__title{
+    color: #243994;
+    font-size: 13.96px;
 }

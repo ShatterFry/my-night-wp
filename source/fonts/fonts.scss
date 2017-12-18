@@ -1,0 +1,9 @@
+@font-face{
+    font-family: 'roboto-regular';
+    src:
+        url('./Roboto-Regular.ttf') format(truetype);
+}
+
+@mixin roboto($style: regular){
+    font-family: 'roboto-regular';
+}

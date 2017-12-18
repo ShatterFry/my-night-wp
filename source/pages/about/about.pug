@@ -5,37 +5,39 @@ block content
 
     section.section.hero
       .hero__socials
-        ul.socials
-          each item in ['vk', 'fb', 'in']
-            li.socials__item
-              a(href="" class=`socials__item socials__item_${item}`)
-                
+        include ../../components/socials/socials.pug 
       .hero__title
         .section-title
           img(src=require("./header_bg.jpg"), alt="header background").section-title__pic
         .user.hero__user
-          .user__pic
-            img.user__pic-img
+          .user__avatar
+            .user__avatar-pic
+              img.user__avatar-img(src=require("./photo.jpg") alt="photo")
           .user__description
-            .user__name Владимир Астахов
+            .user__name Каверин Никита
             .user__info Личный сайт разработчика
       .hamburger.hero__menu
+        img.hamburger__pic(src=require('./hamburger.svg') alt="hamburger")
       .arrow-down.hero__scroll-btn
+        img.arrow-down__pic(src=require("./arrow_down.svg") alt="")
       
     section.section.about
       .about__left
         .triangle.tringle_fill_white.about__left-triangle
-        .about__left-title
-          .block-title Обо мне
-        .about__left-content
-          .user-description
-            .user-description__image
-              img.user-description__avatar(src="" alt="")
-            .user-description__title
-              .block-subtitle Кто я
-            .user-description__text.text-content
-              p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__left-container
+          .about__left-title
+            .block-title Обо мне
+          .about__left-content
+            .user-description
+              .user-description__image
+                .user-description__avatar-pic
+                  img.user-description__avatar-img(src=require('./photo.jpg') alt="")
+              .user-description__title
+                .block-subtitle Кто я
+              .user-description__text.text-content
+                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      
       .about__right
         .triangle.tringle_fill_beige.about__right-triangle
         .about__right-title
