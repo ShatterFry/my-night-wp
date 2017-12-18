@@ -1,4 +1,5 @@
 import 'normalize.css';
+import '../../pages/base.scss';
 import './index.scss';
 import createMenu from '../../components/menu/menu';
 

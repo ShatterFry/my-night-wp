@@ -2,11 +2,31 @@ extends ../base
 block head
     title index page
 block content
-    section.section.hero
+    .wrapper
+        img.page-bg(src=require("./bg.jpg"))
+        section.section.auth
+            h1.auth__title авторизуйтесь
+            form.auth__form.form-container
+                input(name="login" id="login" placeholder="Логин")
+                input(name="password" id="password" placeholder="Пароль")
+                .form-container__human
+                    input(type="checkbox" name="human" id="human")
+                    label(for="human") Я человек
+                .auth__subtitle Вы точно не робот?
+                .form-container__robot
+                    input(type="radio" name="robot-no" id="robot-no")
+                    label(for="robot-no") Да
+                    input(type="radio" name="robot-yes" id="robot-yes")
+                    label(for="robot-yes") Не уверен
+            .form-container__btns
+                .btns
+                    a(href="#" class="auth__btn") На главную
+                    button(type="submit" class="auth__btn") Войти
+
         a(href="#").auth.hero__auth
         .hero__title
             .section-title
-                img(src=require('./bg.jpg'), alt="").section-title__pic
+                
             .hero__user
                 .user
                     .user__pic
@@ -25,3 +45,4 @@ block content
     span.desc Личный сайт веб разработчика
     img(src=require('./webpack.svg'), width="100")
     
+    include ../../components/footer/footer.pug
