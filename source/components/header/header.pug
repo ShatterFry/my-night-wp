@@ -1,0 +1,17 @@
+section.section.hero
+      .hero__socials
+        include ../../components/socials/socials.pug 
+      .hero__title
+        .section-title
+          img(src=require("./header_bg.jpg"), alt="header background").section-title__pic
+        .user.hero__user
+          .user__avatar
+            .user__avatar-pic
+              img.user__avatar-img(src=require("./photo.jpg") alt="photo")
+          .user__description
+            .user__name Каверин Никита
+            .user__info Личный сайт разработчика
+      .hamburger.hero__menu
+        img.hamburger__pic(src=require('./hamburger.svg') alt="hamburger")
+      .arrow-down.hero__scroll-btn
+        img.arrow-down__pic(src=require("./arrow_down.svg") alt="")

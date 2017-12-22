@@ -1,3 +1,24 @@
-h1{
-    color: green;
+.blog-content{
+    display: grid;
+    background: white;
+    color: black;
+
+    $col-template: '1fr [sidebar-start]1fr 1fr[sidebar-end] 1fr [posts-start]1fr 1fr 1fr 1fr 1fr 1fr[posts-end] 1fr';
+    grid-template-columns: #{$col-template};
+}
+
+.blog-content__aside{
+    grid-column: sidebar-start / sidebar-end;
+}
+
+.side-menu__list{
+    list-style: none;
+}
+
+.blog-content__posts{
+    grid-column: posts-start / posts-end;
+}
+
+.posts__list{
+    list-style: none;
 }

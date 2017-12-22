@@ -1,0 +1,11 @@
+mixin user(title)
+    .user.hero__user
+            .user__avatar
+                .user__avatar-pic
+                    img.user__avatar-img(src=require("../../images/photo.jpg") alt="photo")
+            .user__description
+                if title.show
+                    h1.user__title #{title.text}
+                else
+                    .user__name Каверин Никита
+                .user__info Личный сайт разработчика

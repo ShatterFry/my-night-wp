@@ -1,0 +1,37 @@
+.hero{
+    position: relative;
+}
+
+.hero__socials{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.socials{
+    list-style: none;
+}
+
+.hero__user{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+}
+
+.hero__menu{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.section-title__pic{
+    width: 100%;
+}
+
+.hero__scroll-btn{
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    transform: translate(-50%, -72%);
+}
