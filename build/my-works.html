@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="viewport" content="initial-scale=1.0, width=device-width">
-    <title>my-works page</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мои работы</title>
   <link href="./css/common.css" rel="stylesheet"><link href="./css/my-works.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
+      <section class="section hero">
+        <div class="hero__socials">
+<ul class="socials">
+  <li class="socials__item"><a class="socials__item socials__item_vk" href=""><img src="images/vk.svg" alt=""></a></li>
+  <li class="socials__item"><a class="socials__item socials__item_gt" href=""><img src="images/github.svg" alt=""></a></li>
+  <li class="socials__item"><a class="socials__item socials__item_in" href=""><img src="images/in.svg" alt=""></a></li>
+</ul>
+        </div>
+        <div class="hero__title">
+          <div class="section-title"><img class="section-title__pic" src="images/header_bg.jpg" alt="header background"></div>
+              <div class="user hero__user">
+                <div class="user__avatar">
+                  <div class="user__avatar-pic"><img class="user__avatar-img" src="images/photo.jpg" alt="photo"></div>
+                </div>
+                <div class="user__description">
+                  <div class="user__name">Каверин Никита</div>
+                  <div class="user__info">Личный сайт разработчика</div>
+                </div>
+              </div>
+        </div>
+        <div class="hamburger hero__menu"><img class="hamburger__pic" src="images/hamburger.svg" alt="hamburger"></div>
+        <div class="arrow-down hero__scroll-btn"><img class="arrow-down__pic" src="images/arrow_down.svg" alt=""></div>
+      </section>
+      <section class="section page-title">
+        <h1 class="page-title__text section__title">Мои работы</h1>
+      </section>
 <div class="container">
   <ul id="slides">
     <li class="slide showing"></li>
@@ -17,16 +44,25 @@
     <button class="controls" id="next">&gt;</button>
   </div>
 </div>
-      <section class="section speak"><img class="speak__img" src="images/about_bg.jpg" alt="">
+      <section class="section speak">
+        <div class="speak__bg">
+          <div class="speak__bg-pic"><img class="speak__bg-img" src="images/about_bg.jpg" alt=""></div>
+        </div>
         <div class="container">
           <h2 class="speak__title">что обо мне говорят</h2>
           <div class="opinions">
             <ul class="opinions__list">
-              <li class="opinions__item opinion"><img class="opinion__photo" src="" alt="photo"><img class="opinion__style-pic" src="" alt="quotes">
+              <li class="opinions__item opinion">
+                <div class="opinion__photo">
+                  <div class="opinion__photo-pic"><img class="opinion__photo-img" src="images/dima_k_ava.jpg" alt="photo"></div>
+                </div><img class="opinion__quotes-img" src="images/quotes.png" alt="quotes">
                 <p class="opinion__text">Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!</p>
                 <div class="opinion__signature signature"><span class="signature__name">Ковальчук Дмитрий</span><span class="signature__position">- основатель Loftschool</span></div>
               </li>
-              <li class="opinions__item opinion"><img class="opinion__photo" src="" alt="photo"><img class="opinion__style-pic" src="" alt="quotes">
+              <li class="opinions__item opinion">
+                <div class="opinion__photo">
+                  <div class="opinion__photo-pic"><img class="opinion__photo-img" src="images/vova_s_ava.jpg" alt="photo"></div>
+                </div><img class="opinion__quotes-img" src="images/quotes.png" alt="quotes">
                 <p class="opinion__text">Этот код выдержит любые испытания. Только, пожалуйста, не загружайте сайт на слишком старых браузерах!</p>
                 <div class="opinion__signature signature"><span class="signature__name">Сабанцев Владимир</span><span class="signature__position">- преподаватель</span></div>
               </li>
@@ -45,24 +81,34 @@
         </div>
       </section>
     </div>
-<footer class="footer">
-  <div class="footer__row">
-    <div class="container">
-      <div class="footer__col footer__col-left">
-        <div class="footer__description">Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool</div>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer-container">
+          <div class="footer__col footer__col-left">
+            <div class="footer__description">Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool</div>
+          </div>
+          <div class="footer__col footer__col-center">
+            <nav class="footer-menu">
+              <li class="footer-menu__item">Мои работы</li>
+            </nav>
+            <div class="footer__socials">
+<ul class="socials">
+  <li class="socials__item"><a class="socials__item socials__item_vk" href=""><img src="images/vk.svg" alt=""></a></li>
+  <li class="socials__item"><a class="socials__item socials__item_gt" href=""><img src="images/github.svg" alt=""></a></li>
+  <li class="socials__item"><a class="socials__item socials__item_in" href=""><img src="images/in.svg" alt=""></a></li>
+</ul>
+            </div>
+          </div>
+          <div class="footer__col footer__col-right">
+            <div class="footer__address">
+              <address class="address"><span class="address__skype">shatterfry</span><span class="address__email">nik16s@mail.ru</span><span class="address__phone">+7 919 983 04 71</span><span class="address__address">г.Волгоград, ул. 64-й армии, д.38б</span></address>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer__col footer__col-center">
-        <nav class="menu"></nav>
+      <div class="footer__row">
+        <div class="footer__copyright">© Владимир Астахов | Создано с любовью в LoftSchool | 2016</div>
       </div>
-    </div>
-  </div>
-  <div class="footer__row">
-    <div class="container">
-      <div class="footer__copyright">
-        <div class="copyright"></div>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
   <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/my-works.js"></script></body>
 </html>

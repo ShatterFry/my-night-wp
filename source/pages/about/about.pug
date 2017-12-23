@@ -3,7 +3,10 @@ extends ../base
 block content
   .wrapper
 
-    include ../../components/header/header.pug
+    include ../../_mixins/header/header.pug
+    - var title = {show: true, text: 'блог'}
+    - var arrow = {show: false}
+    +header(title, arrow)
       
     section.section.about
       .about__left
@@ -64,4 +67,5 @@ block content
                   .contacts-row__icon
                   .contacts-row__content Волгоград, ул. 64-й армии д.38б
       
-  include ../../components/footer/footer.pug
+  include ../../_mixins/footer/footer.pug
+  +footer
