@@ -1,15 +1,15 @@
 mixin header(title)
-    section.section.hero
-      .hero__socials
-        include ../../components/socials/socials.pug 
-      .hero__title
-        .section-title
-          img(src=require("../../images/header_bg.jpg"), alt="header background").section-title__pic
-        include ../../_mixins/user/user.pug
-        +user(title)
-      .hamburger.hero__menu
-        img.hamburger__pic(src=require('../../images/hamburger.svg') alt="hamburger")
-      
-      if arrow.show
-        .arrow-down.hero__scroll-btn
-          img.arrow-down__pic(src=require("../../images/arrow_down.svg") alt="")
+  section.section.hero
+    .hero__socials
+      +socials 
+    .hero__title
+      .section-title
+        img(src=require("../../images/header_bg.jpg"), alt="header background").section-title__pic
+      include ../../_mixins/user/user.pug
+      +user(title)
+    .hamburger.hero__menu
+      img.hamburger__pic(src=require('../../images/hamburger.svg') alt="hamburger")
+    
+    if arrow.show
+      .arrow-down.hero__scroll-btn
+        img.arrow-down__pic(src=require("../../images/arrow_down.svg") alt="")

@@ -1,0 +1,16 @@
+mixin socials
+    ul.socials
+        li.socials__item
+            a(href="" class=`socials__item socials__item_vk`)
+                img(src=require("../../images/vk.svg") alt="VK")
+        li.socials__item
+            a(href="" class=`socials__item socials__item_gt`)
+                img(src=require("../../images/github.svg") alt="GitHub")
+        li.socials__item
+            a(href="" class=`socials__item socials__item_in`)
+                img(src=require("../../images/in.svg") alt="LinkedIn")
+                -//use(xlink:href="images/sprite.svg#git")
+                -//use(xlink:href="images/github.svg")
+                -//use(xlink:href="#github")
+                -//use(xlink:href=require("./sprite.svg")+'#'+'git')
+                

@@ -1,1 +1,1 @@
-webpackJsonp([4],{27:function(n,e,o){"use strict";o(1),o(28);var u=(0,function(n){return n&&n.__esModule?n:{default:n}}(o(2)).default)(["Мои работы","Обо мне","Блог"],"menu");document.body.appendChild(u),console.log("in login.js")},28:function(n,e){}},[27]);
+webpackJsonp([4],{28:function(n,e,o){"use strict";o(1),o(29);var u=(0,function(n){return n&&n.__esModule?n:{default:n}}(o(2)).default)(["Мои работы","Обо мне","Блог"],"menu");document.body.appendChild(u),console.log("in login.js")},29:function(n,e){}},[28]);

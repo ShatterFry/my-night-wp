@@ -8,10 +8,66 @@
     text-align: center;
 }
 
+.speak{
+    position: relative;
+    overflow: hidden;
+    //z-index: 1;
+    //background-image: url(require('../../images/about-bg-2.jpg'));
+}
+
+.speak__title{
+    text-align: center;
+}
+
+.speak__bg{
+    //position: absolute;
+    //z-index: -10;
+}
+
 .speak__bg-img{
-    width: 100%;
+    width: 160%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -42%;
+    z-index: -10;
 }
 
 .opinions__list{
+    display: flex;
     list-style: none;
+    padding: 0;
+}
+
+.opinions__item{
+    display: flex;
+    flex-flow: column;
+    width: 48%;
+    align-items: center;
+}
+
+.opinions__item:nth-child(2n+1){
+    margin-right: 4%;
+}
+
+.opinion__photo-pic{
+    height: 77px;
+    width: 77px;
+    overflow: hidden;
+}
+
+.opinion__photo-img{
+    max-width: 100%;
+}
+
+.section__subtitle{
+    font-family: 'SansusWebissimo', Arial, 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.connect__form{
+    display: flex;
+    flex-flow: column;
 }

@@ -12,13 +12,13 @@ block content
         section.section.page-title
             h1.page-title__text.section__title Мои работы
 
-        include ../../components/slider/slider.pug
+        include ../../components/slider2/slider.pug
 
         section.section.speak
             .speak__bg
                 .speak__bg-pic
-                    img.speak__bg-img(src=require('../../images/about_bg.jpg') alt="")
-            .container
+                    img.speak__bg-img(src=require('../../images/about-bg.jpg') alt="background")
+            .opinions__container
                 h2.speak__title что обо мне говорят
                 
                 .opinions
@@ -27,30 +27,29 @@ block content
                             .opinion__photo
                                 .opinion__photo-pic
                                     img.opinion__photo-img(src=require('../../images/dima_k_ava.jpg') alt="photo")
-                            img.opinion__quotes-img(src=require('../../images/quotes.png') alt="quotes")
+                            //-img.opinion__quotes-img(src=require('../../images/quotes.png') alt="quotes")
                             p.opinion__text Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжёлых испытаний и бессонных ночей!
-                            .opinion__signature.signature
-                                span.signature__name Ковальчук Дмитрий
-                                span.signature__position - основатель Loftschool
+                            span.signature__name Ковальчук Дмитрий
+                            span.signature__position - основатель Loftschool
                             
                         li.opinions__item.opinion
                             .opinion__photo
                                 .opinion__photo-pic
                                     img.opinion__photo-img(src=require('../../images/vova_s_ava.jpg') alt="photo")
-                            img.opinion__quotes-img(src=require('../../images/quotes.png') alt="quotes")
+                            //- img.opinion__quotes-img(src=require('../../images/quotes.png') alt="quotes")
                             p.opinion__text Этот код выдержит любые испытания. Только, пожалуйста, не загружайте сайт на слишком старых браузерах!
-                            .opinion__signature.signature
-                                span.signature__name Сабанцев Владимир
-                                span.signature__position - преподаватель
+                            span.opinion__name Сабанцев Владимир
+                            span.opinion__position - преподаватель
 
 
                 .connect
-                    h3.connect__title связаться со мной
+                    h3.section__subtitle связаться со мной
                     form.form.connect__form
                         input(name="name" id="name" class="form__name" placeholder="Ваше имя")
                         input(name="email" id="email" class="form__email" placeholder="Ваш email")
                         textarea(name="message" id="message" class="form__message" placeholder="Ваше сообщение")
-                        button.form__submit Отправить
-                        button.form__clear(type="button") Очистить
+                        .form__row
+                            button.form__submit(type="submit") Отправить
+                            button.form__clear(type="button") Очистить
 
     +footer

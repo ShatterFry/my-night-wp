@@ -1,8 +1,31 @@
-.container
-    ul#slides
-        li.slide.showing
-        li.slide
-        li.slide
-    .buttons
-        button.controls#previous &lt;
-        button.controls#next &gt;
+.section.works
+    .works__content
+        .works__left
+            .works-slider__content
+                .works-slider__content-wrapper
+                    .works-slider__display
+                        img(src="" alt="").works-slider__display-pic
+                    .works-slider__item-about
+                        .works__subtitle
+                            .subtitle
+                        .works__content-desc
+                        .works__content-btn
+                            a(href="#").works__content-view
+                                i.fa.works__content-view-icon.fa-link
+                                | Посмотреть сайт
+        .works__right
+            .works-slider
+                .works-slider__controls
+                    a(href="#").works-slider__control-btn.works-slider__control-btn_left
+                        ul.works-slider__control-list
+                            li.works-slider__control-item(data-full="./img/content/slider/1.png" data-title="Агентсво интернет решений &quot;ITLoft&quot;" data-skills="node" data-link="http://itloft.ru/")
+                                img.works-slider___control-img(src="./img/content/slider/1.png")
+                            li.works-slider__control-item(data-full="./img/content/slider/2.png" data-title="Школа онлай-образования &quot;LoftSchool&quot;" data-skills="html5, CSS3, javascript, php"
+                  data-link="http://loftschool.com/")
+                                img.works-slider___control-img(src="./img/content/slider/2.png")
+                            li.works-slider__control-item(data-full="./img/content/slider/3.png" data-title="Портал обучающих уроков &quot;LoftBlog&quot;" data-skills="Ruby on Rails, javascript, RESTful"
+                  data-link="http://loftblog.ru/")
+                                img.works-slider___control-img(src="./img/content/slider/3.png")
+                            li.works-slider__control-item(data-full="./img/content/slider/4.png" data-title="Сайт &quot;Атма йога&quot;" data-skills="UX, design, seo" data-link="http://atmayoga.ru/")
+                                img.works-slider___control-img(src="./img/content/slider/4.png")
+                    a(href="#").works-slider__control-btn.works-slider__control-btn_right
