@@ -1,14 +1,20 @@
-mixin header(title)
+mixin header(title, arrow, hamburger, button)
   section.section.hero
     .hero__socials
-      +socials 
+      +socials
+      
     .hero__title
       .section-title
         img(src=require("../../images/header_bg.jpg"), alt="header background").section-title__pic
       include ../../_mixins/user/user.pug
       +user(title)
-    .hamburger.hero__menu
-      img.hamburger__pic(src=require('../../images/hamburger.svg') alt="hamburger")
+
+    if hamburger.show == true
+      .hamburger.hero__menu
+        img.hamburger__pic(src=require('../../images/hamburger.svg') alt="hamburger")
+
+    if button.show == true
+      a.hero__link.auth-link(href="#") Авторизоваться
     
     if arrow.show
       .arrow-down.hero__scroll-btn

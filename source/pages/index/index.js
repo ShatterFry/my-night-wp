@@ -1,10 +1,10 @@
 import 'normalize.css';
-import '../../pages/base.scss';
 import './index.scss';
 import createMenu from '../../components/menu/menu';
+import '../../app.js';
 
 let menu = createMenu(['Главная', 'Обо мне', 'Блог'], 'menu');
-document.body.appendChild(menu);
+//document.body.appendChild(menu);
 
 console.log('in index.js');
 console.log($);

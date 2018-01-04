@@ -4,6 +4,7 @@
 
 .auth{
     display: flex;
+    display: none;
     width: 380px;
     flex-flow: column;
     position: absolute;
@@ -55,18 +56,20 @@
     background: #dee3e7;
 }
 
-.auth__btn{
-    width: 49%;
+.btns__btn{
+    //width: 49%;
     text-align: center;
     background: #0548be;
     border: 0;
     color: #fff;
     font-size: 16px;
     text-decoration: none;
-    padding: 15px 0;
+    padding: 15px 30px;
 }
 
-
+.btns__btn_num_3{
+    //width: 34%;
+}
 
 .section-title__pic{
     width: 100%;

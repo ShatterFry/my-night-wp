@@ -7,7 +7,9 @@ block content
     .wrapper
         - var title = {show: false, text: 'блог'}
         - var arrow = {show: true}
-        +header(title, arrow)
+        - var hamburger = {show: true}
+        - var button = {show: false}
+        +header(title, arrow, hamburger, button)
 
         section.section.page-title
             h1.page-title__text.section__title Мои работы
@@ -18,6 +20,7 @@ block content
             .speak__bg
                 .speak__bg-pic
                     img.speak__bg-img(src=require('../../images/about-bg.jpg') alt="background")
+            
             .opinions__container
                 h2.speak__title что обо мне говорят
                 

@@ -1,21 +1,24 @@
-mixin footer
-    footer.footer
-        .footer__row.footer__top
-            .footer__col.footer__col-left
-                .footer__description Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool
-            .footer__col.footer__col-center
-                .footer__menu
-                    +menu
-                .footer__socials
-                    +socials
-            .footer__col.footer__col-right
-                .footer__address
-                    address.address
-                        ul.address__list
-                            li.address__item shatterfry
-                            li.address__item nik16s@mail.ru
-                            li.address__item +7 919 983 04 71
-                            li.address__item г.Волгоград, ул. 64-й армии, д.38б
-     
-        .footer__row.footer__bottom
-            div.footer__copyright © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+mixin footer(type)
+    if type == 'transparent'
+        footer.footer.footer_transparent © Владимир Астахов | Создано с любовью в LoftSchool | 2016
+    else
+        footer.footer
+            .footer__row.footer__top
+                .footer__col.footer__col-left
+                    .footer__description Этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool
+                .footer__col.footer__col-center
+                    .footer__menu
+                        +menu
+                    .footer__socials
+                        +socials
+                .footer__col.footer__col-right
+                    .footer__address
+                        address.address
+                            ul.address__list
+                                li.address__item shatterfry
+                                li.address__item nik16s@mail.ru
+                                li.address__item +7 919 983 04 71
+                                li.address__item г.Волгоград, ул. 64-й армии, д.38б
+        
+            .footer__row.footer__bottom
+                .footer__copyright © Владимир Астахов | Создано с любовью в LoftSchool | 2016

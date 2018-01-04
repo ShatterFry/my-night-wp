@@ -6,7 +6,9 @@ block content
     include ../../_mixins/header/header.pug
     - var title = {show: true, text: 'блог'}
     - var arrow = {show: false}
-    +header(title, arrow)
+    - var hamburger = {show: true}
+    - var button = {show: false}
+    +header(title, arrow, hamburger, button)
       
     section.section.about
       .about__left

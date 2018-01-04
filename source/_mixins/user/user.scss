@@ -1,3 +1,10 @@
+.user{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .user__avatar{
     margin-bottom: 36px;
 }
@@ -23,9 +30,14 @@
     //transform: translate(-50%, -50%);
 }
 
+.user__description{
+    
+}
+
 .user__name{
     font-size: 35px;
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .user__title{
@@ -38,4 +50,9 @@
 
 .user__info{
     font-size: 16px;
+    text-align: center;
+}
+
+.user__row_socials{
+    width: 138px;
 }

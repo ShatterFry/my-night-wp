@@ -25,7 +25,8 @@ module.exports = {
     output: {
         path: PATHS.build,
         //filename: './js/bundle.js'
-        filename: './js/[name].js'
+        filename: './js/[name].js',
+        //publicPath: '//'
     },
     plugins: [
         new HtmlWebpackPlugin({
